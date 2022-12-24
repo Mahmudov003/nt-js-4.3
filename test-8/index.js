@@ -2,8 +2,14 @@
 
 function studentsByGroup(arr) {
     return arr.reduce((acc,cv) => {
-
-    })
+        if (!acc[cv.group]) {
+            acc[cv.group] = [];
+            acc[cv.group].push(cv)
+        } else {
+            acc[cv.group].push(cv)
+        }
+        return acc
+    },{})
 
 
 }
